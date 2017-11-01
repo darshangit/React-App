@@ -11,4 +11,4 @@ export default (
         <Route path="about" component={AboutPage} />
         <Route path="courses" component={CoursesPage} />
     </Route>
-)
+);
