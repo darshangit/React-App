@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from "react-redux";
 
 class CoursesPage extends React.Component {
 
@@ -35,4 +36,10 @@ class CoursesPage extends React.Component {
     }
 }
 
-export default CoursesPage;
+function mapStateToProps(state, ownProps) {
+    return {
+        courses
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (CoursesPage); // connect is used tomap the container to  the redux
