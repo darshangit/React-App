@@ -2,8 +2,9 @@ import * as type from '../actions/actiontypes'
 
 export default function courseReducer(state = [], action) {
     switch(action.type) {
-        case type.CREATE_COURSE:
-        return [...state, Object.assign({}, action.course)];
+        case type.LOAD_COURSES_SUCCESS:
+        return action.courses;
+        //[...state, Object.assign({}, action.course)];
             // ... is the spread operator. basicaly the above statememnt can be decoded as below:
             // ...state : will take all the values in the state and create a nbew state array
             // Object.assign() : will take the new state and add the course into the new state array which we will be return.
