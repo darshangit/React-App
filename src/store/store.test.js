@@ -14,11 +14,11 @@ describe('Store', function() {
         const action = courseActions.createCourseSuccess(course);
         store.dispatch(action);
 
-        const actual = store.getState().courses[0]
+        const actual = store.getState().courses[0];
         const expected = {
             title: "Clean Code"
         };
 
         expect(actual).toEqual(expected);
-    })
-})
+    });
+});

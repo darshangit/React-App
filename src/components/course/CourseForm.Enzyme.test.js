@@ -27,4 +27,4 @@ describe('CourseForm via Enzyme', () => {
         const wrapper = setUp(true);
         expect(wrapper.find('input').props().value).toBe('Saving...');
     });
-})
+});

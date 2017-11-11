@@ -5,6 +5,7 @@ import * as courseActions from '../../actions/courseActions';
 import CourseForm from "./CourseForm";
 import toastr from "toastr";
 import { authorsFormattedForDropDown } from "../selectors/selectors";
+
 export class ManageCoursePage extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -56,7 +57,7 @@ export class ManageCoursePage extends React.Component {
             errors.title = 'Title must be at least 5 characters';
             formIsValid = false;
         }
-        this.setState({errors: errors})
+        this.setState({errors: errors});
         return formIsValid;
     }
 

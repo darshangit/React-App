@@ -12,7 +12,8 @@ describe('Course Reducer', () => {
         const newCourse = { title: 'C' };
         const action = actions.createCourseSuccess(newCourse);
 
-        const newState = courseReducer(initialState, action)
+        const newState = courseReducer(initialState, action);
+
         expect(newState.length).toEqual(3);
         expect(newState[0].title).toEqual('A');
         expect(newState[1].title).toEqual('B');
@@ -30,7 +31,7 @@ describe('Course Reducer', () => {
         const course = { id: 'B' ,title: 'New Title' };
         const action = actions.updateCourseSuccess(course);
 
-        const newState = courseReducer(initialState, action)
+        const newState = courseReducer(initialState, action);
         const updateCourse = newState.find(a => a.id == course.id);
         const untouchedCourse = newState.find(a => a.id == 'A');
 
